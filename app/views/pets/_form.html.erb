@@ -1,0 +1,30 @@
+<%= form_for (@pet) do |f| %>
+	<fieldset>
+		<ol>
+			<li>
+				<%= f.label :name %>
+				<%= f.text_field :name, autofocus: true %>
+			</li>
+			<li>
+				<%= f.label :breed %>
+				<%= f.text_field :breed %> 
+			</li>
+			<li>
+				<%= f.label :description %>
+				<%= f.text_area :description, cols: 40, rows: 7 %> 
+			</li>
+			<li>
+				<%= f.label :birthday %>
+				<%= f.date_select :birthday %> 
+			</li>
+			<li>
+				<%= f.label :image_file_name %>
+				<%= f.text_field :image_file_name %> 
+			</li>
+		</ol>
+		<p>
+      <%= f.submit %>
+      <%= link_to "Cancel", pets_path, class: 'button' %>
+    </p>
+	</fieldset>
+	<% end %>

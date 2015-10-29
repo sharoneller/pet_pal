@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users, :only => [:show]
   get "pets" => "pets#index"
+  root to: "pets#index"
+  get "pets/:id" => "pets#show", as: "pet"
+  get "new_pet" => "pets#new"
+  resources :pets
+  #get "user/:id" => "users#show"
+  #get "pet/:id" => "pets#show"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

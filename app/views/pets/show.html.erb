@@ -1,0 +1,16 @@
+<li>
+  <strong><%= @pet.name %></strong>
+  <%= image_for(@pet) %>
+  	<p> Breed: <%= @pet.breed %></p>
+  		<p>Description:<%= @pet.description %></p>
+  		<p>Birthday:<%= @pet.birthday %></p>
+  </li>
+
+   <footer>
+    <nav>
+        <%= link_to 'Edit', edit_pet_path(@pet), class: 'button' %>
+        <%= link_to 'Delete', @pet, 
+                  class: 'button',
+                  method: :delete, data: { confirm: 'Are you sure?' } %>          
+    </nav>
+  </footer>
