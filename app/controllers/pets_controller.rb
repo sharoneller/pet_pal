@@ -37,5 +37,5 @@ end
 private
 
   def pet_params
-    params.require(:pet).permit(:name, :description, :breed, :image_file_name)
+    params.require(:pet).permit(:name, :description, :breed, :image_file_name, :birthday)
   end

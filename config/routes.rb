@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users, :only => [:show]
+  get 'users/:id' => 'users#show'
+  get 'users' => 'users#index', as: 'user'
+#  resources :users, :only => [:show]
   get "pets" => "pets#index"
   root to: "pets#index"
   get "pets/:id" => "pets#show", as: "pet"
   get "new_pet" => "pets#new"
   resources :pets
+  resources :users
   #get "user/:id" => "users#show"
   #get "pet/:id" => "pets#show"
 
