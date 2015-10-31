@@ -3,7 +3,14 @@
 		<%= link_to "Pets", pets_path %> | 
 		<%= link_to "Create New Pet", new_pet_path %> |
 		<%= link_to "Users", user_path %>
-
-
 	</ul>
+	<div class="container-fluid float:right;">
+	<div class="row">
+		<div class="span9"><%= yield %></div>
+		<div class="span3"></div>
+		<h2> About Us</h2>
+		We connect pets and people.
+	</div>
+</div>
 </nav>
+
