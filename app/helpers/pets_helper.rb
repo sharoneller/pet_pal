@@ -6,4 +6,9 @@ module PetsHelper
      image_tag(pet.image_file_name)
    end
  end
+# def format_date
+ #	date = strftime(%B, %d, %Y) 
+ #end
+ 	
+ 
 end

@@ -10,6 +10,7 @@ class PetsController < ApplicationController
 	end
 	def create
     @pet = Pet.new(pet_params)
+    @pet.user_id = current_user.id
     if @pet.save
       redirect_to @pet, notice: "Pet successfully created!"
     else
