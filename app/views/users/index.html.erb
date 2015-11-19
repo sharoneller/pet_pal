@@ -2,7 +2,7 @@
 	<ul>
 		<% @users.each do |user| %>
  	<li>
-  	<strong><%= link_to user.email, user %></strong>
+  	<strong><%= link_to user.username, user %></strong>
  	</li>
 	<% end %>
 </ul>
