@@ -4,11 +4,15 @@ Rails.application.routes.draw do
   get 'users' => 'users#index', as: 'user'
 #  resources :users, :only => [:show]
   get "pets" => "pets#index"
+
+  get "petfinder" => "petfinders#index"
+
   root to: "pets#index"
   get "pets/:id" => "pets#show", as: "pet"
   get "new_pet" => "pets#new"
   resources :pets
   resources :users
+  resources :petfinders
   #get "user/:id" => "users#show"
   #get "pet/:id" => "pets#show"
 

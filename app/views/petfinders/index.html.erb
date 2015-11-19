@@ -1,0 +1,13 @@
+<h1>Looking for a Shelter Pet in your area?</h1>
+<ul>
+<% @shelter_pets.each do |shelter_pet| %>
+ <li>
+  <strong><%=  shelter_pet.name %></strong>
+  	<p> Animal: <%= shelter_pet.animal %></p>
+  		<p>Mix:<%= shelter_pet.mix %></p>
+  		<p>Sex:<%= shelter_pet.sex %></p>
+  	
+  	
+  </li>
+<% end %>
+</ul>
