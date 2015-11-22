@@ -5,14 +5,14 @@ Rails.application.routes.draw do
 #  resources :users, :only => [:show]
   get "pets" => "pets#index"
 
-  get "petfinder" => "petfinders#index"
+  get "petfinders" => "pet_finders#index"
 
   root to: "pets#index"
   get "pets/:id" => "pets#show", as: "pet"
   get "new_pet" => "pets#new"
   resources :pets
   resources :users
-  resources :petfinders
+  #resources :petfinders
   #get "user/:id" => "users#show"
   #get "pet/:id" => "pets#show"
 
