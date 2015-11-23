@@ -1,9 +1,22 @@
-<nav>
-	<ul>
+<header class="page-header">
+	<ul class="nav nav-pills pull-left">
 		<%= link_to "Pets", pets_path %> | 
 		<%= link_to "Create New Pet", new_pet_path %> |
 		<%= link_to "Users", user_path %>
 	</ul>
-	
-</nav>
+<% if user_signed_in? %>
+  <ul class="nav nav-pills pull-right">
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  </ul>
+<% else %>
+  <ul class="nav nav-pills pull-right">
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  </ul>
+<% end %>
+
+</header>
+
 
